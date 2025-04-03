@@ -118,6 +118,7 @@ After running the queries and transforming the data, the results are stored in D
 ## Contributions
 
 Feel free to fork the repository and make contributions. If you have suggestions or improvements, please submit a pull request.
+The dataset is also avaialble in this repository.
 
 ## Acknowledgement
 

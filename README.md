@@ -33,9 +33,17 @@ Make sure you have a MySQL server running and have access to the database `data1
 Modify the database connection string in the following line of the code with your MySQL username, password, and host:
 
 ```python
+import os
 from sqlalchemy import create_engine
-engine = create_engine('mysql+pymysql://user10:123@localhost/data1202')
+
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST', 'localhost')
+database = os.getenv('DB_NAME', 'data1202')
+
+engine = create_engine(f'mysql+pymysql://{user}:{password}@{host}/{database}')
 conn = engine.connect()
+
 ```
 
 ## Code Explanation
@@ -45,9 +53,17 @@ conn = engine.connect()
 The project connects to a MySQL database using SQLAlchemy and PyMySQL. We use the following code to create a connection:
 
 ```python
+import os
 from sqlalchemy import create_engine
-engine = create_engine('mysql+pymysql://user10:123@localhost/data1202')
+
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST', 'localhost')
+database = os.getenv('DB_NAME', 'data1202')
+
+engine = create_engine(f'mysql+pymysql://{user}:{password}@{host}/{database}')
 conn = engine.connect()
+
 ```
 
 ### Step 2: Querying the Database

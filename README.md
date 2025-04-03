@@ -80,8 +80,8 @@ complex_df = pd.read_sql_query('''
 ```python
 query1 = pd.read_sql_query(
     """
-    SELECT
-        CASE
+    SELECT 
+        CASE 
             WHEN Year < 2005 THEN 'pre-2005'
             ELSE 'post-2005'
         END AS Sales_Period,
@@ -119,8 +119,15 @@ After running the queries and transforming the data, the results are stored in D
 
 Feel free to fork the repository and make contributions. If you have suggestions or improvements, please submit a pull request.
 
+## Acknowledgement
+
+Special thanks to the open-source community and all contributors who helped make this project possible.
+
+## Author
+
+Caniya Sabu
+
 ## License
 
 This project is open-source and available under the MIT License.
-
 

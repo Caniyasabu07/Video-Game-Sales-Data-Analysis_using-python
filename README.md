@@ -39,7 +39,7 @@ from sqlalchemy import create_engine
 user = os.getenv('DB_USER')
 password = os.getenv('DB_PASSWORD')
 host = os.getenv('DB_HOST', 'localhost')
-database = os.getenv('DB_NAME', 'data1202')
+database = os.getenv('DB_NAME', 'DB_NAME')
 
 engine = create_engine(f'mysql+pymysql://{user}:{password}@{host}/{database}')
 conn = engine.connect()
@@ -51,7 +51,7 @@ Set Environment Variables before running the script:
 export DB_USER="your_username"
 export DB_PASSWORD="your_password"
 export DB_HOST="your_host"
-export DB_NAME="data1202"
+export DB_NAME="DB_NAME"
 ```
 
 ## Code Explanation
@@ -67,7 +67,7 @@ from sqlalchemy import create_engine
 user = os.getenv('DB_USER')
 password = os.getenv('DB_PASSWORD')
 host = os.getenv('DB_HOST', 'localhost')
-database = os.getenv('DB_NAME', 'data1202')
+database = os.getenv('DB_NAME', 'DB_NAME')
 
 engine = create_engine(f'mysql+pymysql://{user}:{password}@{host}/{database}')
 conn = engine.connect()
